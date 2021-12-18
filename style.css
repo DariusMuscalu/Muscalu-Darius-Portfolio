@@ -1,5 +1,7 @@
 /* Choose 2 fonts to import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Outfit:wght@300;400;600&family=Suez+One&display=swap');
+/* Font for name signature in the header */
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Inter:wght@400;700&family=Lexend+Deca&family=Outfit:wght@300;400;600&family=Suez+One&display=swap');
 
 * {
     box-sizing: border-box;
@@ -12,17 +14,104 @@ body {
     font-family: 'Suez One', Arial, Helvetica, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    background-color: #4177B6;
+    box-shadow: none;
+    border: none;
+    padding: 1em;
+    margin-top: 1.5em;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1em;
+}
+
+#emoji {
+    font-size: 2em;
+}
+
+#signature {
+    font-family: 'Imperial Script', Helvetica, sans-serif;
+    font-size: 3em;
+}
+
+/* CONTACT SECTION */
+#contact {
+    display: flex;
+}
+
+.right-flexbox-container {
+    background-image: url(./images/Christmas_x2C__celebration_x2C__fireworks_x2C__Santa_Claus_x2C__snowman_x2C__fun.svg);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    height: 30em;
+    width: 50%;
+}
+
+.text-label {
+    display: flex;
+    padding: 1em;
+    justify-content: space-evenly;
+}
+
 @media screen and (max-width: 600px) {
-    header nav {
+    /* Navigation Style */
+    .desktop-nav {
         display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1em;
+        list-style: none;
+        padding: 0 1em;
+    }
+
+    .mobile-nav button {
+        padding: 0.5em;
+    }
+
+    .outer-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #4177B6;   
+        border-radius: 4em;
+        width: 7em;
+        height: 3.5em;
+        margin-top: 2.2em;
+    }
+
+    .outer-container button {
+        background-color: #fff;
+        padding: 0.5em;
+        border-radius: 50%;
+        margin: 1.5em 0;
+        width: 3em;
+        height: 3em;
+    }
+
+    .outer-container img {
+        width: 1.8em;
+        height: auto;
+    }
+
+    #mobile-menu {
+        background-color: #DFE0A6;
     }
 
     .main-container {
         background-image: url(./images/background_anim.svg);
         background-repeat: no-repeat;
-        background-position: center 8em;
+        background-position: center 4em;
         background-size: 100% 80%;
-        margin-top: 6.5em;
+        margin-top: 4em;
     }
 
     .left-container {
@@ -32,29 +121,89 @@ body {
         align-items: center;
     }
 
-    .left-container #call-to-action-btn {
-        background-color: #4177B6;
-        padding: 1em;
-        margin-top: 1.5em;
-        border-radius: 1em;
-        color: #fff;
-        font-size: 1em;
-        border: none;
-    }
-
     .right-container img {
         max-width: 100%;
         height: auto;
     }
 
+    /* PROJECTS SECITON */
+
     #projects {
+        display: none;
         background-image: url(./images/project_section_background.svg);
         background-repeat: no-repeat;
         background-position: center;
     }
 
-    .laptop-frame {
-        height: 15em;
+    .presentation-container {
+        display: none;
+        padding: 0 3em;
+        background-image: url(./images/Apple\ Macbook\ Pro\ 15_\ Space\ Grey.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 25em;
     }
+
+    .phone-presentation {
+        background-color: red;
+        padding: 10em 1em;
+        height: 60em;
+        background-image: url(./images/Apple\ iPhone\ X\ Silver.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 88%;
+    }
+
+    .phone-presentation iframe {
+        border-radius: 2.5em;
+        margin-left: 1em;
+        z-index: -1;
+    }
+
+    /*ABOUT ME SECTION */
+    #about-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.5;
+        background-image: url(./images/about-me-background.svg);
+    }
+
+    .flex-container {
+        background-color: #c7c7c7;
+        background-image: url(./images/flex-container-background.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 1em;
+        padding: 1em;
+        color: #fff;
+    }
+
+    .flex-container p {
+        padding-top: 1em;
+        line-height: 1.8;
+    }
+
+    .flex-container img {
+        width: 99%;
+        height: auto;
+        padding-top: 1em;
+    }
+
+
+    /* CONTACT SECTION */
+    .contact-proposition {
+        margin-top: 1em;
+        padding: 1em;
+        font-size: 1.2em;
+    }
+
+    .contact-form {
+        background-color: #fff;
+    }
+
+    
+
 
   }

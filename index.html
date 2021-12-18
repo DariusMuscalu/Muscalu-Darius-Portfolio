@@ -10,20 +10,33 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><button id="light-dark-mode"></button></li>
-            </ul>
+            <div class="desktop-nav">
+                <ul>
+                    <li><a href="#" id="nav-signature">Muscalu Darius</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><button id="light-dark-mode"><img src="./images/light-mode-icon.svg" alt="light-mode-icon"></button></li>
+                </ul>
+            </div>
+            <div class="mobile-nav">
+                <div id="mobile-menu">
+                    <button id="mobile-menu"><img src="https://img.icons8.com/ios-glyphs/60/000000/menu.png"/></button>
+                </div>
+                <div class="outer-container">
+                        <button id="light-mode"><img src="./images/light-mode-icon.svg" alt="light-mode-icon"></button>
+                        <button id="dark-mode"><img src="./images/dark-mode-icon.svg" alt="dark-mode-icon"></button>
+                </div>
+            </div>
+        
         </nav>
     </header>
 
     <main>
         <div class="main-container">
             <div class="left-container">
-                <h1>Muscalu Darius</h1>
-                <h2>Front End Egineer</h2>
+                <h1 id="signature">Muscalu Darius</h1>
+                <h2>Front End Engineer</h2>
                 <button id="call-to-action-btn">Check My Projects!</button>
             </div>
             <div class="right-container">
@@ -31,14 +44,86 @@
             </div>
         </div>
     </main>
+
     <section id="projects">
-        <div>
-            <p>Project Name</p>
-            <div class="laptop-frame">
-                <p>testing</p>
+        <div class="presentation-container">
+            <div class="laptop-screen">
+                <iframe src="https://dariusmuscalu.github.io/Project-Fylo/" frameborder="0"></iframe>
             </div>
+            <p>testing</p>
+        </div>
+
+        <div class="phone-presentation">
+            <iframe src="https://dariusmuscalu.github.io/Project-Fylo/" frameborder="0" height="650px" width="310px"></iframe>
         </div>
     </section>
-    <h1>Footer</h1>
+
+    <section id="about-me">
+        <div class="flex-container">
+            <span id="emoji">✨</span>
+            <h2>Who am I?</h2>
+            <p>Hey! I am Darius! I am currently studying Computer Engineering at “Transilvania University of Brasov. I am an Front End Developer! I like to get myself involved in every opportunity that life is offering me to get better!</p>
+        </div>
+        <div class="flex-container">
+            <span id="emoji">😄</span>
+            <h2>My Passions</h2>
+            <p>I love to travel, read and improve myself everyday. I’m interested in entrepreneurship and technology. In the future I’m planning to start my own business.</p>
+        </div>
+        <div class="flex-container">
+            <span id="emoji">❤️</span>
+            <h2>Volunteer</h3>
+            <img src="./images/best-logo.svg" alt="best logo">
+            <p>I am a volunteer in BEST which stands for Board European Student Technology. The main value proposition of this association are: “Improving students everyday!” I volunteer in the IT Department.</p>
+            <button>See More</button>
+        </div>
+        <div class="flex-container">
+            <span id="emoji">🔥</span>
+            <h2>Competitive</h3>
+            <img src="./images/hackathon-photo.svg" alt="hackathon photo">
+            <p>I like hackathons! Here’s me and my team at GreenLife Hackathon.  We managed to get second place with our business idea!</p>
+            <button>See More</button>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div>
+            <h2>My Skills</h2>
+        </div>
+        <!-- Use grid to display them-->
+        <div class="skills-container">
+
+        </div>
+    </section>
+
+    <section  id="contact">
+        <div class="left-container">
+            <div class="contact-form">
+                <form action="">
+                    <div class="text-label">
+                        <label for="first-name">First Name</label>
+                        <label for="">Second Name</label>
+                    </div>
+                    <div class="two-row-input">
+                        <input type="text" id="first-name" placeholder="Enter your name">
+                        <input type="text" id="second-name" placeholder="Enter your name">
+                    </div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <label for="message">Message</label>
+                    <textarea type="text" id="message" placeholder="Enter message" rows="4" cols="10"></textarea>
+                    <button id="send-contact-info">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="right-flexbox-contaienr">
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>Footer</p>
+    </footer>
+
+    <script src="https://cdn.rawgit.com/scottschiller/Snowstorm/master/snowstorm-min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
