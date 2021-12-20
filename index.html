@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="https://cdn.rawgit.com/scottschiller/Snowstorm/master/snowstorm-min.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Muscalu Darius</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -16,114 +20,113 @@
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">About Me</a></li>
                     <li><a href="#">Portfolio</a></li>
-                    <li><button id="light-dark-mode"><img src="./images/light-mode-icon.svg" alt="light-mode-icon"></button></li>
+                    <li><button id="light-dark-mode"><img src="./images/light-mode-icon.svg"
+                                alt="light-mode-icon"></button></li>
                 </ul>
             </div>
             <div class="mobile-nav">
                 <div id="mobile-menu">
-                    <button id="mobile-menu"><img src="https://img.icons8.com/ios-glyphs/60/000000/menu.png"/></button>
+                    <button id="mobile-menu"><img src="https://img.icons8.com/ios-glyphs/60/000000/menu.png" /></button>
                 </div>
                 <div class="outer-container">
-                        <button id="light-mode"><img src="./images/light-mode-icon.svg" alt="light-mode-icon"></button>
-                        <button id="dark-mode"><img src="./images/dark-mode-icon.svg" alt="dark-mode-icon"></button>
+                    <button onclick="lightMode()" id="light-mode"><img src="./images/light-mode-icon.svg"
+                            alt="light-mode-icon"></button>
+                    <button onclick="darkMode()" id="dark-mode"><img src="./images/dark-mode-icon.svg"
+                            alt="dark-mode-icon"></button>
                 </div>
             </div>
-        
+
         </nav>
     </header>
 
     <main>
         <div class="main-container">
             <div class="left-container">
-                <h1 id="signature">Muscalu Darius</h1>
+                <h1 id="signature" class="typed">Muscalu Darius</h1>
                 <h2>Front End Engineer</h2>
-                <button id="call-to-action-btn">Check My Projects!</button>
+                <button id="call-to-action-btn"><a href="#projects">Check My Projects!</a></button>
             </div>
             <div class="right-container">
-                <img src="./images/239193064_785506842144653_7769448776180351957_n-removebg-preview 1.svg" alt="phot of myself">
+                <img src="./images/239193064_785506842144653_7769448776180351957_n-removebg-preview 1.svg"
+                    alt="phot of myself">
             </div>
         </div>
     </main>
 
     <section id="projects">
-        <div class="presentation-container">
-            <div class="laptop-screen">
-                <iframe src="https://dariusmuscalu.github.io/Project-Fylo/" frameborder="0"></iframe>
+            <h2>Projects</h2>
+            <img src="./images/doftana-valley-project.svg" alt="project presentation">
+            <div class="about-project">
+                <button onclick="displayProjectInfo()">About Project</button>
+                <p id="project-info">I learned a lot of things from this project. Starting with responsive design, including a video background with iframe. Using flexbox and grid for image gallery. And so more.</p>
+                <button><a href="https://dariusmuscalu.github.io/Toursim-Agency/" title="Toursim Agency Project" target="_blank">See Project Live</a></button>
             </div>
-            <p>testing</p>
-        </div>
-
-        <div class="phone-presentation">
-            <iframe src="https://dariusmuscalu.github.io/Project-Fylo/" frameborder="0" height="650px" width="310px"></iframe>
-        </div>
     </section>
 
     <section id="about-me">
         <div class="flex-container">
             <span id="emoji">✨</span>
             <h2>Who am I?</h2>
-            <p>Hey! I am Darius! I am currently studying Computer Engineering at “Transilvania University of Brasov. I am an Front End Developer! I like to get myself involved in every opportunity that life is offering me to get better!</p>
+            <p>Hey! I am Darius! I am currently studying Computer Engineering at “Transilvania University of Brasov. I
+                am an Front End Developer! I like to get myself involved in every opportunity that life is offering me
+                to get better!</p>
         </div>
         <div class="flex-container">
             <span id="emoji">😄</span>
             <h2>My Passions</h2>
-            <p>I love to travel, read and improve myself everyday. I’m interested in entrepreneurship and technology. In the future I’m planning to start my own business.</p>
+            <p>I love to travel, read and improve myself everyday. I’m interested in entrepreneurship and technology. In
+                the future I’m planning to start my own business.</p>
         </div>
         <div class="flex-container">
             <span id="emoji">❤️</span>
             <h2>Volunteer</h3>
-            <img src="./images/best-logo.svg" alt="best logo">
-            <p>I am a volunteer in BEST which stands for Board European Student Technology. The main value proposition of this association are: “Improving students everyday!” I volunteer in the IT Department.</p>
-            <button>See More</button>
+                <img src="./images/best-logo.svg" alt="best logo">
+                <p>I am a volunteer in BEST which stands for Board European Student Technology. The main value
+                    proposition of this association are: “Improving students everyday!” I volunteer in the IT
+                    Department.</p>
+                <button><a href="https://bestbrasov.ro/" title="Go to BEST Brasov site" target="_blank">See More</a></button>
         </div>
         <div class="flex-container">
             <span id="emoji">🔥</span>
             <h2>Competitive</h3>
-            <img src="./images/hackathon-photo.svg" alt="hackathon photo">
-            <p>I like hackathons! Here’s me and my team at GreenLife Hackathon.  We managed to get second place with our business idea!</p>
-            <button>See More</button>
+                <img src="./images/hackathon-photo.svg" alt="hackathon photo">
+                <p>I like hackathons! Here’s me and my team at GreenLife Hackathon. We managed to get second place with
+                our business idea!</p>
+                <button><a href="https://github.com/DariusMuscalu/Hackathon" title="See hackathon presentation" target="_blank">See more</a></button>
         </div>
     </section>
 
     <section id="skills">
-        <div>
+        <div class="skills-intro">
             <h2>My Skills</h2>
         </div>
-        <!-- Use grid to display them-->
-        <div class="skills-container">
-
+        <div class="grid-container">
+            <img src="./images/programming-languages/c.svg" alt="c programming language logo">
+            <img src="./images/programming-languages/cpp.svg" alt="cpp programming language logo">
+            <img src="./images/programming-languages/java.svg" alt="java programming language logo">
+            <img src="./images/programming-languages/javascript.svg" alt="javascript programming language logo">
+            <img src="./images/programming-languages/python.svg" alt="python programming language logo">
+            <img src="./images/programming-languages/typescript.svg" alt="typescript programming language logo">
         </div>
     </section>
 
-    <section  id="contact">
-        <div class="left-container">
-            <div class="contact-form">
-                <form action="">
-                    <div class="text-label">
-                        <label for="first-name">First Name</label>
-                        <label for="">Second Name</label>
-                    </div>
-                    <div class="two-row-input">
-                        <input type="text" id="first-name" placeholder="Enter your name">
-                        <input type="text" id="second-name" placeholder="Enter your name">
-                    </div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter email">
-                    <label for="message">Message</label>
-                    <textarea type="text" id="message" placeholder="Enter message" rows="4" cols="10"></textarea>
-                    <button id="send-contact-info">Send</button>
-                </form>
-            </div>
-        </div>
-        <div class="right-flexbox-contaienr">
-        </div>
+    <section id="contact">
+        <form action="">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="Enter your name">
+            <label for="">Second Name</label>
+            <input type="text" id="second-name" placeholder="Enter your name">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email">
+            <label for="message">Message</label>
+            <textarea type="text" id="message" placeholder="Enter message" rows="4" cols="10"></textarea>
+            <button id="send-contact-info">Send</button>
+        </form>
     </section>
 
     <footer id="footer">
-        <p>Footer</p>
+        <p>Copyright &copy; <a href="#">Muscalu Darius 2021</a></p>
     </footer>
-
-    <script src="https://cdn.rawgit.com/scottschiller/Snowstorm/master/snowstorm-min.js"></script>
-    <script src="script.js"></script>
 </body>
+
 </html>

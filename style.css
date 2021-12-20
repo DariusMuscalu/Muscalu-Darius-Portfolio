@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #DFE0A6;
     font-family: 'Suez One', Arial, Helvetica, sans-serif;
@@ -16,7 +20,11 @@ body {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
 }
 
 button {
@@ -28,6 +36,25 @@ button {
     border-radius: 1em;
     color: #fff;
     font-size: 1em;
+    cursor: pointer;
+}
+
+.darkMode {
+    background-color: #232D47;
+    color: #fff;
+}
+
+.darkMode #mobile-menu {
+    background-color: #232D47;
+}
+
+.lightMode {
+    background-color: #DFE0A6;
+    color: #000;
+}
+
+.lightMode #mobile-menu {
+    background-color: #DFE0A6;
 }
 
 #emoji {
@@ -39,23 +66,13 @@ button {
     font-size: 3em;
 }
 
-/* CONTACT SECTION */
-#contact {
-    display: flex;
-}
-
-.right-flexbox-container {
-    background-image: url(./images/Christmas_x2C__celebration_x2C__fireworks_x2C__Santa_Claus_x2C__snowman_x2C__fun.svg);
-    background-size: 90%;
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background-image: url(./images/project_section_background.svg);
+    background-position: 0 -23.7em;
     background-repeat: no-repeat;
-    height: 30em;
-    width: 50%;
-}
-
-.text-label {
-    display: flex;
-    padding: 1em;
-    justify-content: space-evenly;
+    color: #fff;
 }
 
 @media screen and (max-width: 600px) {
@@ -129,35 +146,33 @@ button {
     /* PROJECTS SECITON */
 
     #projects {
-        display: none;
         background-image: url(./images/project_section_background.svg);
         background-repeat: no-repeat;
         background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .presentation-container {
+    #projects img {
+        margin: 1em 0;
+        width: 95%;
+    }
+
+    #projects p {
         display: none;
-        padding: 0 3em;
-        background-image: url(./images/Apple\ Macbook\ Pro\ 15_\ Space\ Grey.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 25em;
     }
 
-    .phone-presentation {
-        background-color: red;
-        padding: 10em 1em;
-        height: 60em;
-        background-image: url(./images/Apple\ iPhone\ X\ Silver.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 88%;
+    #projects button {
+        margin: .5em;
+        width: 150px;
+        color: #fff;
     }
 
-    .phone-presentation iframe {
-        border-radius: 2.5em;
-        margin-left: 1em;
-        z-index: -1;
+    #project-info {
+        margin: .8em;
+        color: #fff;
     }
 
     /*ABOUT ME SECTION */
@@ -191,19 +206,63 @@ button {
         padding-top: 1em;
     }
 
+    /* SKILLS SECTION */
+    #skills {
+        background-image: url(./images/background_anim.svg);
+        background-repeat: no-repeat;
+        background-position: center 1em;
+        background-size: 100% 113%;
+    }
+
+    .skills-intro {
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+        font-size: 1.5em;
+    }
+
+    .grid-container {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        padding: 2em;
+    }
+
+    .grid-item img {
+        padding: 1.3em;
+    }
 
     /* CONTACT SECTION */
+    #contact {
+        background-image: url(./images/project_section_background.svg);
+    }
+
     .contact-proposition {
         margin-top: 1em;
         padding: 1em;
         font-size: 1.2em;
     }
 
-    .contact-form {
-        background-color: #fff;
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1em;
     }
 
+    label {
+        margin: 0 1em;
+        text-shadow: 1px 1px 1px #000;
+    }
+
+    input, textarea, #send-contact-info {
+        width: 90%;
+        padding: 0.7em;
+        margin: .5em;
+        border-radius: 1em;
+        border: none;
+    }
     
-
-
   }
