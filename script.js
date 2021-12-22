@@ -10,18 +10,26 @@ snowStorm.useTwinkleEffect = true;
 // 4. Start the snowstorm!
 snowStorm.start();
 
-// These 2 dosen't work as it supposed, resolve them
-function darkMode() {
-    let element = document.body;
-    element.classList.toggle("darkMode");
-}
-
-function lightMode() {
-    let element = document.body;
-    element.classList.toggle("lightMode");
-}
-
 // Displays the information about the project when the 'about project' is clicked
 function displayProjectInfo() {
     document.getElementById("project-info").style.display = "block";
 }
+
+//Desktop light / dark 
+let lightButton = document.getElementById('light-mode-desktop');
+let darkButton = document.getElementById('dark-mode-desktop');
+
+darkButton.addEventListener('click', () => {
+    document.body.style.backgroundImage = `url(${'./images/body-dark-mode.svg'})`;
+    darkButton.style.display = 'none';
+    lightButton.style.display = 'block';
+});
+
+lightButton.addEventListener('click', () => {
+    document.body.style.backgroundImage = `url(${'./images/confetti-doodles.svg'})`;
+    darkButton.style.display = 'block';
+    lightButton.style.display = 'none';
+});
+
+
+// Timer to display each image for 2 sec

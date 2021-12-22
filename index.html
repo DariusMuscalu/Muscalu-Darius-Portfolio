@@ -5,35 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="desktop-style.css">
     <script src="https://cdn.rawgit.com/scottschiller/Snowstorm/master/snowstorm-min.js" defer></script>
     <script src="script.js" defer></script>
-    <title>Muscalu Darius</title>
+
+    <title>Muscalu Darius | Front End Engineer</title>
 </head>
 
 <body>
     <header>
         <nav>
             <div class="desktop-nav">
+                <img src="./images/logo-removebg-preview.png" alt="website logo" width="150px" height="150px"
+                    title="Muscalu Corporation Logo">
                 <ul>
-                    <li><a href="#" id="nav-signature">Muscalu Darius</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><button id="light-dark-mode"><img src="./images/light-mode-icon.svg"
-                                alt="light-mode-icon"></button></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">Portfolio</a></li>
+                    <button id="light-mode-desktop" class="hide-light-mode-btn">
+                        <img src="./images/light-mode.svg"
+                            alt="light-mode-icon">
+                    </button>
+                    <button id="dark-mode-desktop">
+                        <img src="./images/dark-mode-icon.svg"
+                            alt="dark-mode-icon">
+                    </button>
                 </ul>
             </div>
             <div class="mobile-nav">
                 <div id="mobile-menu">
                     <button id="mobile-menu"><img src="https://img.icons8.com/ios-glyphs/60/000000/menu.png" /></button>
                 </div>
-                <div class="outer-container">
-                    <button onclick="lightMode()" id="light-mode"><img src="./images/light-mode-icon.svg"
-                            alt="light-mode-icon"></button>
-                    <button onclick="darkMode()" id="dark-mode"><img src="./images/dark-mode-icon.svg"
-                            alt="dark-mode-icon"></button>
-                </div>
+                    <button id="light-mode-desktop" class="hide-light-mode-btn">
+                        <img src="./images/light-mode.svg"
+                            alt="light-mode-icon">
+                    </button>
+                    <button id="dark-mode-desktop">
+                        <img src="./images/dark-mode-icon.svg"
+                            alt="dark-mode-icon">
+                    </button>
             </div>
 
         </nav>
@@ -47,20 +65,22 @@
                 <button id="call-to-action-btn"><a href="#projects">Check My Projects!</a></button>
             </div>
             <div class="right-container">
-                <img src="./images/239193064_785506842144653_7769448776180351957_n-removebg-preview 1.svg"
-                    alt="phot of myself">
+                <img src="./images/239193064_785506842144653_7769448776180351957_n-removebg-preview 1 (2).svg"
+                    alt="photo of myself">
             </div>
         </div>
     </main>
 
     <section id="projects">
-            <h2>Projects</h2>
-            <img src="./images/doftana-valley-project.svg" alt="project presentation">
-            <div class="about-project">
-                <button onclick="displayProjectInfo()">About Project</button>
-                <p id="project-info">I learned a lot of things from this project. Starting with responsive design, including a video background with iframe. Using flexbox and grid for image gallery. And so more.</p>
-                <button><a href="https://dariusmuscalu.github.io/Toursim-Agency/" title="Toursim Agency Project" target="_blank">See Project Live</a></button>
-            </div>
+        <h2>Projects</h2>
+        <img src="./images/doftana-valley-project.svg" alt="project presentation">
+        <div class="about-project">
+            <button onclick="displayProjectInfo()">About Project</button>
+            <p id="project-info">I learned a lot of things from this project. Starting with responsive design, including
+                a video background with iframe. Using flexbox and grid for image gallery. And so more.</p>
+            <button><a href="https://dariusmuscalu.github.io/Toursim-Agency/" title="Toursim Agency Project"
+                    target="_blank">See Project Live</a></button>
+        </div>
     </section>
 
     <section id="about-me">
@@ -77,22 +97,24 @@
             <p>I love to travel, read and improve myself everyday. I’m interested in entrepreneurship and technology. In
                 the future I’m planning to start my own business.</p>
         </div>
-        <div class="flex-container">
+        <div class="flex-container bigger-container">
             <span id="emoji">❤️</span>
             <h2>Volunteer</h3>
                 <img src="./images/best-logo.svg" alt="best logo">
                 <p>I am a volunteer in BEST which stands for Board European Student Technology. The main value
-                    proposition of this association are: “Improving students everyday!” I volunteer in the IT
+                    proposition of this association are: “Improving students everyday!”. I volunteer in the IT
                     Department.</p>
-                <button><a href="https://bestbrasov.ro/" title="Go to BEST Brasov site" target="_blank">See More</a></button>
+                <button><a href="https://bestbrasov.ro/" title="Go to BEST Brasov site" target="_blank">See
+                        More</a></button>
         </div>
-        <div class="flex-container">
+        <div class="flex-container bigger-container">
             <span id="emoji">🔥</span>
             <h2>Competitive</h3>
                 <img src="./images/hackathon-photo.svg" alt="hackathon photo">
                 <p>I like hackathons! Here’s me and my team at GreenLife Hackathon. We managed to get second place with
-                our business idea!</p>
-                <button><a href="https://github.com/DariusMuscalu/Hackathon" title="See hackathon presentation" target="_blank">See more</a></button>
+                    our business idea!</p>
+                <button><a href="https://github.com/DariusMuscalu/Hackathon" title="See hackathon presentation"
+                        target="_blank">See more</a></button>
         </div>
     </section>
 
@@ -111,17 +133,44 @@
     </section>
 
     <section id="contact">
-        <form action="">
+        <form action="https://formspree.io/f/mdoborbj" method="POST">
             <label for="first-name">First Name</label>
-            <input type="text" id="first-name" placeholder="Enter your name">
+            <input type="text" id="first-name" placeholder="Enter your name" name="first-name">
             <label for="">Second Name</label>
-            <input type="text" id="second-name" placeholder="Enter your name">
+            <input type="text" id="second-name" placeholder="Enter your name" name="second-name">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter email">
+            <input type="email" id="email" placeholder="Enter email" name="email">
             <label for="message">Message</label>
-            <textarea type="text" id="message" placeholder="Enter message" rows="4" cols="10"></textarea>
-            <button id="send-contact-info">Send</button>
+            <textarea type="text" id="message" placeholder="Enter message" rows="4" cols="10" name="message"></textarea>
+            <button type="submit" id="send-contact-info">Send</button>
         </form>
+        <div class="illustration">
+            <img src="./images/Christmas_x2C__celebration_x2C__fireworks_x2C__Santa_Claus_x2C__snowman_x2C__fun.svg"
+                alt="christmas image">
+        </div>
+    </section>
+
+    <section id="links">
+        <div class="linkedin">
+            <a href="https://www.linkedin.com/in/darius-muscalu-04465821b/" target="_blank" title="My linkedin account">
+                <img src="./images/links-images/linkedin-svgrepo-com.svg" alt="linkedin logo">
+            </a>
+        </div>
+        <div class="github">
+            <a href="https://github.com/DariusMuscalu" target="_blank" title="My github account">
+                <img src="./images/links-images/github-svgrepo-com.svg" alt="github logo">
+            </a>
+        </div>
+        <div class="facebook">
+            <a href="https://www.facebook.com/darius.muscalu.94/" target="_blank" title="My facebook account">
+                <img src="./images/links-images/facebook-svgrepo-com.svg" alt="facebook logo">
+            </a>
+        </div>
+        <div class="twitter">
+            <a href="https://twitter.com/muscalu_darius" target="_blank" title="My twitter profile">
+                <img src="./images/links-images/twitter-svgrepo-com.svg" alt="twitter logo">
+            </a>
+        </div>
     </section>
 
     <footer id="footer">
