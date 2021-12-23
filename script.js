@@ -10,12 +10,12 @@ snowStorm.useTwinkleEffect = true;
 // 4. Start the snowstorm!
 snowStorm.start();
 
-// Displays the information about the project when the 'about project' is clicked
+// Displays the information about the project when the 'about project' button is clicked
 function displayProjectInfo() {
     document.getElementById("project-info").style.display = "block";
 }
 
-//Desktop light / dark 
+// light / dark mode 
 let lightButton = document.getElementById('light-mode-desktop');
 let darkButton = document.getElementById('dark-mode-desktop');
 

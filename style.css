@@ -19,6 +19,21 @@ body {
   font-family: "Suez One", Arial, Helvetica, sans-serif;
 }
 
+
+/* SCROLL-BAR STYLES */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(90deg,#201c29,#201c29 1px,#100e17 0,#100e17);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #B7B6CC;
+  border-radius: 10px;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -26,6 +41,7 @@ a {
 
 h2, h1 {
   color: #fff;
+  text-align: center;
 }
 
 button {
@@ -183,6 +199,11 @@ footer {
 }
 
 /*ABOUT ME SECTION */
+.about-me-header {
+  padding: 1em;
+  font-size: 2em;
+}
+
 #about-me {
   display: flex;
   flex-direction: column;
@@ -221,6 +242,10 @@ footer {
   background-size: 100% 113%;
 }
 
+#skills h2 {
+  font-size: 2em;
+}
+
 .skills-intro {
   color: #fff;
   text-align: center;
@@ -257,6 +282,12 @@ form {
   flex-direction: column;
   justify-content: center;
   padding-left: 1em;
+}
+
+form h2 {
+  text-align: left;
+  padding-bottom: 1em;
+  font-size: 2em;
 }
 
 label {
